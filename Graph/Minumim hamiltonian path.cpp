@@ -1,5 +1,5 @@
 // - Descripción: Calcula el costo minimo del camino que visita cada nodo una sola vez
-// - Complejidad: 
+// - Complejidad: O(2^n * n^2)
 
 #include <bits/stdc++.h>
 using namespace std;
