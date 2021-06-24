@@ -18,6 +18,7 @@ struct dsu {
     void make() {
         pad.push_back(sz(pad));
         tam.push_back(1);
+        size++;
     }
 
     int find(int v) {
