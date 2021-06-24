@@ -1,0 +1,5 @@
+Sean a y b enteros positivos coprimos entre sí. Consideremos para cada n natural la ecuación ax+by=n,
+donde x e y son enteros no negativos. Entonces, el mayor n tal que no existen x e y no negativos verificando dicha igualdad,
+es n=ab−a−b.
+
+Corolario: La cantidad de números n que no se pueden escribir como suma de múltiplos positivos de a y b es K=(a−1)(b−1)/2
