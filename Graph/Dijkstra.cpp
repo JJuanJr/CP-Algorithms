@@ -1,5 +1,5 @@
 // - Descrición: Halla la ruta de costo minimo entre un nodo v y todos los demas
-// - Complejidad: O(E + V log(V))
+// - Complejidad: O(E + V * log(V))
 
 #include <bits/stdc++.h>
 using namespace std;

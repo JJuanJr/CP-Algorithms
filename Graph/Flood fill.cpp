@@ -1,5 +1,5 @@
 // - Descripción: Colorea y cuenta el tamaño de las componentes conexas de un grafo implicito
-// - Complejidad: O(n^2)
+// - Complejidad: O(n * m)
 
 #include <bits/stdc++.h>
 using namespace std;

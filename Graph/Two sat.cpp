@@ -1,5 +1,5 @@
 // - Descripción: Resuelve una formula booleana donde cada clausula tiene exactamente dos variables
-// - Complejidad: O(n + m)
+// - Complejidad: O(V + E)
 
 #include <bits/stdc++.h>
 using namespace std;
