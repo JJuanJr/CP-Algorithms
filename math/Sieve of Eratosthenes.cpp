@@ -7,7 +7,7 @@ using namespace std;
 #define ll long long
 #define sz(x) int(x.size())
 
-const int MAX = 1e3;
+const int MAX = 1e6;
 bitset<MAX + 5> bs;
 vector<int> prime;
 
@@ -25,6 +25,6 @@ void sieve() {
 
 int main() {
     sieve();
-    for (int &i : prime) cout << i << endl;
+    
     return 0;
 }
