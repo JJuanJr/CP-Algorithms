@@ -9,7 +9,7 @@ using namespace std;
 
 vector<int> prime;
 
-vector<ll> segment_criba(ll l, ll r) {
+vector<ll> segmented_criba(ll l, ll r) {
     l = max(l, 2ll);
     vector<bool> vis(r - l + 1);
     for (int &pp : prime) {
