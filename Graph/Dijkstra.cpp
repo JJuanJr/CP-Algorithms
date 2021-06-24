@@ -1,4 +1,4 @@
-// - Descrición: Halla la ruta de costo minimo entre un node v y todos los demas
+// - Descrición: Halla la ruta de costo minimo entre un nodo v y todos los demas
 // - Complejidad: O(E + V log(V))
 
 #include <bits/stdc++.h>
