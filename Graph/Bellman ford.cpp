@@ -42,5 +42,5 @@ int main() {
 	for (int i = 0; i < n; ++i) {
 		cout << i + 1 << " - " << dist[i] << endl;
 	}
-    return 0;
+	return 0;
 }

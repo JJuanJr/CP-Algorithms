@@ -18,7 +18,7 @@ int main() {
 
     vector<int> topo;
     vector<bool> vis(n);
-    
+
     function<void(int)> dfs = [&](int v) {
         vis[v] = true;
         for (int &u : ady[v]) {

@@ -46,7 +46,7 @@ int main() {
             ok &= bipartite(i);
         }
     }
-    
+
     if (ok) {
         for (int i = 0; i < n; ++i) {
             cout << i << " -> " << color[i] << endl;

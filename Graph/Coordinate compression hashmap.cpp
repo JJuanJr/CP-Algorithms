@@ -8,7 +8,7 @@ using namespace std;
 #define sz(x) int(x.size())
 
 int main() {
-    int n, m; cin >> n >> m;
+	int n, m; cin >> n >> m;
 	vector<int> ady[n];
 	unordered_map<ll, int> um;
 
@@ -21,6 +21,5 @@ int main() {
 		ady[um[v]].push_back(um[u]);
 		cout << um[v] << " -> " << um[u] << endl;
 	}
-
-    return 0;
+	return 0;
 }

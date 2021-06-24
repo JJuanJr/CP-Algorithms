@@ -44,7 +44,6 @@ struct dsu {
     int count(int v) {
         return tam[find(v)];
     }
-
 };
 
 struct edge {

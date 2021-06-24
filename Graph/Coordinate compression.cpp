@@ -8,7 +8,7 @@ using namespace std;
 #define sz(x) int(x.size())
 
 int main() {
-    int n, m; cin >> n >> m;
+	int n, m; cin >> n >> m;
 
 	vector<ll> nodes;
 	vector<pair<ll, ll>> edges;
@@ -31,5 +31,5 @@ int main() {
 		ady[v].push_back(u);
 		cout << v << " -> " << u << endl;
 	}
-    return 0;
+	return 0;
 }

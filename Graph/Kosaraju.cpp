@@ -8,7 +8,7 @@ using namespace std;
 #define sz(x) int(x.size())
 
 int main() {
-    	int n, m; cin >> n >> m;
+	int n, m; cin >> n >> m;
 
 	vector<int> ady[n], rady[n];
 	vector<int> grado(n);
@@ -66,5 +66,5 @@ int main() {
 		}
 		cout << endl;
 	}
-    return 0;
+	return 0;
 }

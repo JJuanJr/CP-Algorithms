@@ -8,7 +8,7 @@ using namespace std;
 #define sz(x) int(x.size())
 
 int main() {
-    int n, m; cin >> n >> m;
+	int n, m; cin >> n >> m;
 	vector<int> ady[n];
 	while (m--) {
 		int a, b; cin >> a >> b;

@@ -8,7 +8,7 @@ using namespace std;
 #define sz(x) int(x.size())
 
 int main() {
-    int n, m; cin >> n >> m;
+	int n, m; cin >> n >> m;
 	vector<int> ady[n];
 
 	for (int i = 0; i < m; ++i) {
@@ -51,5 +51,5 @@ int main() {
 	for (int i = 0; i < n; ++i) {
 		cout << i << " -> " << comp[i] << endl;
 	}
-    return 0;
+	return 0;
 }
