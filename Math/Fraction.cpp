@@ -19,7 +19,7 @@ struct fraction {
     void simplify() {
         int mcd = __gcd(num, den);
         num /= mcd;
-        den /= den;
+        den /= mcd;
     }
 
     fraction operator + (const fraction &x) const {
@@ -38,12 +38,12 @@ struct fraction {
         return fraction(num * x.den, den * x.num);
     }
 
-    string toString() {
-        return to_string(num) + " / " + to_string(den);
+    friend ostream &operator << (ostream &os, const fraction &x) {
+        return os << x.num << " / " << x.den;
     }
 };
 
 int main() {
-
+    
     return 0;
 }
