@@ -1,4 +1,4 @@
-// - Descripción: Encuentra el punto maximo o minimo de una funcion
+// - Descripción: Encuentra el punto minimo o maximo de una funcion
 // - Comlejidad: O(log(n))
 
 #include <bits/stdc++.h>
