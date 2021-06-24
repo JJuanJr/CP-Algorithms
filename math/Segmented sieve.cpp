@@ -1,4 +1,4 @@
-// - Descripción: Calcula los numeros en un rango
+// - Descripción: Calcula los numeros primos en un rango, requiere calcular los numeros primos hasta las raiz del n maximo
 // - Complejidad: O(n * log(log(n)))
 
 #include <bits/stdc++.h>
