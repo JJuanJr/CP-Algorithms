@@ -1,14 +1,17 @@
+// - Descripción: Calcula los numeros primos menores o iguales que MAX 
+// - Complejidad: O(n * log(log(n)))
+
 #include <bits/stdc++.h>
 using namespace std;
 
 #define ll long long
 #define sz(x) int(x.size())
 
-const int MAX = 1e6;
+const int MAX = 1e3;
 bitset<MAX + 5> bs;
 vector<int> prime;
 
-void criba() {
+void sieve() {
     bs.set();
     for (int i = 2; i <= MAX; ++i) {
         if (bs[i]) {
@@ -21,7 +24,7 @@ void criba() {
 }
 
 int main() {
-    criba();
-    
+    sieve();
+    for (int &i : prime) cout << i << endl;
     return 0;
 }
