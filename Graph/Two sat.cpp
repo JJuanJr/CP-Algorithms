@@ -8,7 +8,6 @@ using namespace std;
 #define sz(x) int(x.size())
 
 struct two_sat {
-
     int n, cont, scc;
     vector<vector<int>> ady;
     vector<int> low, num, comp, val;
