@@ -1,4 +1,4 @@
-// - Descripción: Exponenciacion binaria con modulo
+// - Descripción: Exponenciacion binaria
 // - Complejidad: O(log(n))
 
 #include <bits/stdc++.h>
