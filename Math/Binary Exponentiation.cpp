@@ -1,3 +1,6 @@
+// - Descripción: Exponenciacion binaria con modulo
+// - Complejidad: O(log(n))
+
 #include <bits/stdc++.h>
 using namespace std;
 
