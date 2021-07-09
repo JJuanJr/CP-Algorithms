@@ -17,7 +17,7 @@ struct fraction {
     }
 
     void simplify() {
-        int mcd = __gcd(num, den);
+        int mcd = __gcd(abs(num), abs(den));
         num /= mcd;
         den /= mcd;
     }
