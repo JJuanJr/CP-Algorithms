@@ -1,5 +1,5 @@
 // - Descripción: Encuentra el punto minimo o maximo de una funcion
-// - Comlejidad: O(log(n))
+// - Complejidad: O(log(n))
 
 #include <bits/stdc++.h>
 using namespace std;
