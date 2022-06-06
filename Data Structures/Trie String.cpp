@@ -15,41 +15,38 @@ void _print(T t, V... v) { cerr << t; if (sizeof...(v)) cerr << ", "; _print(v..
 #define form(i, n, m, x) for (int i = int(n); i < int(m); i += int(x))
 #define rform(i, n, m, x) for (int i = int(n); i >= int(m); i -= int(x))
 
+struct Node {
+    int cont;
+    Node* child[26];
+};
+
 struct Trie {
-    struct Node {
-        char c;
-        int cont;
-        Node* next[123];
-
-        Node(char _c): c(_c) {}
-    };
-
     Node* root;
 
     Trie() {
-        root = new Node('$');
-    }
-
-    void insert(const string &s, int i, Node*& curr) {
-        if (sz(s) == i) return;
-        if (curr->next[int(s[i])] == NULL) {
-            curr->next[int(s[i])] = new Node(s[i]);
-        }
-        curr->next[int(s[i])]->cont++;
-        insert(s, i + 1, curr->next[int(s[i])]);
+        root = new Node();
     }
 
     void insert(const string &s) {
-        insert(s, 0, root);
-    }
-
-    pair<int, int> query(const string &s, int i, Node*& curr) {
-        if (sz(s) == i || curr->next[int(s[i])] == NULL) return make_pair(i, curr->cont);
-        return query(s, i + 1, curr->next[int(s[i])]);
+        Node* curr = root;
+        for (int i = 0; i < sz(s); ++i) {
+            if (curr->child[s[i] - 'a'] == NULL) {
+                curr->child[s[i] - 'a'] = new Node();
+            }
+            curr->child[s[i] - 'a']->cont++;
+            curr = curr->child[s[i] - 'a'];
+        }
     }
 
     pair<int, int> query(const string &s) {
-        return query(s, 0, root);
+        Node* curr = root;
+        for (int i = 0; i < sz(s); ++i) {
+            if (curr->child[s[i] - 'a'] == NULL) {
+                return make_pair(i, curr->cont);
+            }
+            curr = curr->child[s[i] - 'a'];
+        }
+        return make_pair(sz(s), curr->cont);
     }
 };
 
