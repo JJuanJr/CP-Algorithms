@@ -27,6 +27,7 @@ int main() {
 
     while (sz(qu)) {
         int v = qu.front();
+        qu.pop();
         topo.push_back(v);
         for (int &u : ady[v]) {
             if (--grado[u] == 0) {
