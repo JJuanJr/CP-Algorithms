@@ -12,7 +12,7 @@ struct edge {
     ll w;
 
     bool operator < (const edge &x) const {
-        return w < x.w;
+        return x.w < w;
     }
 };
 
@@ -37,7 +37,7 @@ int main() {
         while (sz(pq)) {
             v = pq.top();
             pq.pop();
-            if (dist[v.v] != v.w) continue;
+            if (v.w > dist[v.v]) continue;
             for (edge &u : ady[v.v]) {
                 if (dist[u.v] > dist[v.v] + u.w) {
                     dist[u.v] = dist[v.v] + u.w;
