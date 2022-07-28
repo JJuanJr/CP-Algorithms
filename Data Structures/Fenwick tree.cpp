@@ -1,39 +1,24 @@
-// - Descripción: Permite realizar consultas por rangos y actualizaciones
-// - Complejidad: O(log(n))
+template<typename T>
+struct BIT {
+	vector<T> ft;
 
-#include <bits/stdc++.h>
-using namespace std;
+	BIT(int n): ft(n + 1) {}
 
-#define ll long long
-#define sz(x) int(x.size())
+	BIT(const vector<T> &a): ft(sz(a) + 1) {
+		forn (i, sz(a)) { upd(i + 1, a[i]); }
+	}
 
-struct FenwickTree {
-    vector<int> ft;
+	T qry(int i) {
+		T ans = 0;
+		for (; i; i -= i & -i) ans += ft[i];
+		return ans;
+	}
 
-    FenwickTree(int n): ft(n + 1) {}
+	T qry(int l, int r) {
+		return qry(r) - qry(l - 1);
+	}
 
-    FenwickTree(const vector<int> &arr): ft(sz(arr) + 1) {
-        for (int i = 1; i <= sz(arr); ++i) {
-            add(i, arr[i - 1]);
-        }
-    }
-
-    int rsq(int b) {
-        int sum = 0;
-        for (; b; b -= b & -b) sum += ft[b];
-        return sum;
-    }
-
-    int rsq(int a, int b) {
-        return rsq(b) - rsq(a - 1);
-    }
-
-    void add(int b, int v) {
-        for (; b < sz(ft); b += b & -b) ft[b] += v;
-    }
+	void upd(int i, T v) {
+		for (; i < sz(ft); i += i & -i) ft[i] += v;
+	}
 };
-
-int main() {
-    
-    return 0;
-}
